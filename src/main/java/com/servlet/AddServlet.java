@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 
 public class AddServlet extends HttpServlet{
 	
-	public void service(HttpServletRequest request,HttpServletResponse response) throws IOException{
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		int number1 = Integer.parseInt(request.getParameter("number-1"));
 		int number2 = Integer.parseInt(request.getParameter("number-2"));
 		
