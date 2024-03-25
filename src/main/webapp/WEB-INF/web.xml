@@ -11,4 +11,14 @@
   	<url-pattern>/add</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>send</servlet-name>
+  	<servlet-class>com.servlet.SqServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>send</servlet-name>
+  	<url-pattern>/send</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
