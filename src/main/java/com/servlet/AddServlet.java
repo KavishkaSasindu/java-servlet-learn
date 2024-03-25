@@ -1,4 +1,5 @@
 package com.servlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,8 +19,12 @@ public class AddServlet extends HttpServlet{
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		
-		HttpSession session = request.getSession();
-		session.setAttribute("sum", sum);
+//		HttpSession session = request.getSession();
+//		session.setAttribute("sum", sum);
+		
+		Cookie cookie = new Cookie("sum",String.valueOf(sum));
+		
+		response.addCookie(cookie);
 		
 		PrintWriter out = response.getWriter();
 		
