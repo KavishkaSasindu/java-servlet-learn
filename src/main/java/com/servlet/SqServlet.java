@@ -4,10 +4,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Cookie;
+import javax.servlet.annotation.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
+@WebServlet("/send")
 public class SqServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException{
 //		HttpSession session = request.getSession();
